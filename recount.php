@@ -107,4 +107,7 @@ function recountForumStats() {
     }
 }
 
+//just for ref
+//UPDATE smf_log_activity SET mostOn = CAST((RAND() * 30000)+1 AS UNSIGNED)
+
 ?>
