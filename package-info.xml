@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<id>sid2varun:recount_forum_stats</id>
+	<name>Recount forum history stats</name>
+	<version>1.0</version>
+	<type>modification</type>
+
+	<install for="2.0 - 2.0.99">
+		<readme type="file" parsebbc="true">readme.txt</readme>
+		<database>install.php</database>
+		<require-file name="Recount.php" destination="$sourcedir">Controller of modification</require-file>
+		<modification>Modification.xml</modification>
+	</install>
+
+	<uninstall for="2.0 - 2.0.99">
+	    <code>uninstall.php</code>
+		<remove-file name="$sourcedir/Recount.php" />
+		<redirect url="$scripturl?action=admin;area=packages;sa=browse" timeout="1000" />
+	</uninstall>
+
+</package-info>
